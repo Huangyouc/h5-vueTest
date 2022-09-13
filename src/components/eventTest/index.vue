@@ -13,7 +13,6 @@ export default{
     methods:{
         greet(event){
             alert(event.target.tagName)
-            
         }
     }
 }
