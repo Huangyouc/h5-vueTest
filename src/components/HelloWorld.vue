@@ -7,6 +7,8 @@
     <h1 @click="scrollTest">滚动测试</h1>
     <h1 @click="eventTest">事件测试</h1>
     <h1 @click="componentTest">组件测试</h1>
+    <h1 @click="routerTest">路由测试</h1>
+    <h1 @click="animatorTest">动画测试</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -73,6 +75,14 @@ export default {
     componentTest(){
       console.log('componentTest');
       this.$router.push('/componentTest');
+    },
+    routerTest(){
+      console.log('routerTest');
+      this.$router.push('/routerTest/1');
+    },
+    animatorTest(){
+      console.log('animatorTest');
+      this.$router.push('/animatorTest');
     }
   }
 }

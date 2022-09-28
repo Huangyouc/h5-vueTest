@@ -3,6 +3,8 @@ import imagePage from './components/requestImage/index.vue';
 import scrollTest from './components/scrollTest/index.vue';
 import eventTest from './components/eventTest/index.vue';
 import componentTest from './components/component/index.vue';
+import routerTest from './components/routerTest/index.vue';
+import animatorTest from './components/animatorTest/index.vue';
 
 const routeslist = [
     { path: '/shopCar',name: 'ShopCar', component: ShopCar },
@@ -10,5 +12,7 @@ const routeslist = [
     { path: '/scrollTest',name: 'scrollTest', component: scrollTest },
     { path: '/eventTest',name: 'eventTest', component: eventTest },
     { path: '/componentTest',name: 'componentTest', component: componentTest },
+    { path: '/routerTest/1',name: 'routerTest', component: routerTest },
+    { path: '/animatorTest',name: 'animatorTest', component: animatorTest },
 ];
 export default routeslist;
