@@ -6,6 +6,7 @@
     <h1 @click="goImage">图片列表</h1>
     <h1 @click="scrollTest">滚动测试</h1>
     <h1 @click="eventTest">事件测试</h1>
+    <h1 @click="componentTest">组件测试</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -68,6 +69,10 @@ export default {
     eventTest(){
       console.log('eventTest');
       this.$router.push('/eventTest');
+    },
+    componentTest(){
+      console.log('componentTest');
+      this.$router.push('/componentTest');
     }
   }
 }
