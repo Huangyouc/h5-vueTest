@@ -14,7 +14,10 @@
     console.log(myMinxin)
  export default{
     name:"mixinTest",
-    mixins:[myMinxin]
+    mixins:[myMinxin],
+    mounted(){
+       console.log("mounted")
+    }
  }
 </script>
 
