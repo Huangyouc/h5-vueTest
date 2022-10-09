@@ -91,7 +91,8 @@ export default {
       this.$router.push('/mixinTest');
     },
     aaaTest(){
-      console.log('requestTest');
+
+      console.log('requestTest111');
       this.$router.push('/aaaTest');
     }
   }
