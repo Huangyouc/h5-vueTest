@@ -5,6 +5,8 @@ import eventTest from './components/eventTest/index.vue';
 import componentTest from './components/component/index.vue';
 import routerTest from './components/routerTest/index.vue';
 import animatorTest from './components/animatorTest/index.vue';
+import mixinTest from './components/mixinTest/index.vue';
+
 
 const routeslist = [
     { path: '/shopCar',name: 'ShopCar', component: ShopCar },
@@ -14,5 +16,6 @@ const routeslist = [
     { path: '/componentTest',name: 'componentTest', component: componentTest },
     { path: '/routerTest/1',name: 'routerTest', component: routerTest },
     { path: '/animatorTest',name: 'animatorTest', component: animatorTest },
+    { path: '/mixinTest',name: 'mixinTest', component: mixinTest },
 ];
 export default routeslist;
