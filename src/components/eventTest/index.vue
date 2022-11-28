@@ -1,5 +1,6 @@
 <template>
   <div id="hello">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
     <div v-on:click="greet">
       点我
     </div>
@@ -24,10 +25,14 @@
       <input v-model.trim="age3" typ="number">{{age3}}
     </div>
     
+    <div id="heightdemo" @click="checkSafeArea">
+         121212121
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "eventTest",
   components: {},
@@ -57,6 +62,25 @@ export default {
     clickSelfChild() {
       alert('clickSelfChild');
     },
+    clickdiv() {
+      // var height=document.getElementById("heightdemo").offsetHeight
+      // document.getElementById("heightdemo").innerText=height;
+      alert('evn(safe-area-inset-top)');
+    },
+    checkSafeArea() {
+  const $body = $(document.body);
+  const $div = $('<div style="padding-top: env(safe-area-inset-top); padding-top: constant(safe-area-inset-top);"></div>');
+
+  $div.appendTo($body);
+
+  const safeAreaInsetTop = $div.outerHeight();
+
+  if (!safeAreaInsetTop) {
+    $body.addClass('app-android-safe-area');
+  }
+
+  $div.remove();
+}
   }
 }
 </script>
@@ -84,4 +108,25 @@ export default {
   width: 100px;
   background-color: beige;
 }
+#heightdemo{
+    padding-top:40px;
+    background-color: blue;
+}
+#heightdemo{
+  padding-top:constant(safe-area-inset-top);
+  padding-top:evn(safe-area-inset-top);
+  /* padding-top:10px; */
+  /* height:50px; */
+  background-color: blue;
+}
+body.app-ts-mobile{
+  margin-top: 20px;
+  margin-top: constant(safe-area-inset-top);
+  margin-top: env(safe-area-inset-top);
+}
+
+body.app-ts-mobile.app-android-safe-area{
+  margin-top: 20px;
+}
+
 </style>
